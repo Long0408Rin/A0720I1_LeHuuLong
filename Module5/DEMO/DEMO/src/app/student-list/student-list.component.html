@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Mark</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name|titlecase}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.mark}}</td>
+    <td *ngIf="student.mark >=5" class="text-success">PASS</td>
+    <td *ngIf="student.mark <=5" class="text-danger">FAIL</td>
+    <td>
+      <button class ="btn btn-info" (click)="getStudent(student)">Detail</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<app-student-information (throwCurrentMark)="catchMarkFromChildrent($event)" [childStudentDetail]= "parentStudentDetail"></app-student-information>
