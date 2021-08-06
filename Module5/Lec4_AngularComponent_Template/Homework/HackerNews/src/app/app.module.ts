@@ -8,6 +8,8 @@ import { LikesComponent } from './likes/likes.component';
 import { NavabarComponent } from './navabar/navabar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CountdowntimerComponent } from './countdowntimer/countdowntimer.component';
+import { CountdownTimerAliasComponent } from './countdown-timer-alias/countdown-timer-alias.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HeaderComponent } from './header/header.component';
     LikesComponent,
     NavabarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CountdowntimerComponent,
+    CountdownTimerAliasComponent
   ],
   imports: [
     BrowserModule,
